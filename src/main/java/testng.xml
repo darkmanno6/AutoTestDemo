@@ -4,10 +4,7 @@
     <test verbose="2" preserve-order="true" name="TestDebug">
         <parameter name="variable" value="hellotestng" />
         <classes>
-            <class name="TestngDemo.TestngStudy">
-            </class>
+            <class name="TestngDemo.TestngTagdemo01"/>
         </classes>
-
-
     </test>
 </suite>

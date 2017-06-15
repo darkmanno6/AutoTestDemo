@@ -6,7 +6,6 @@ package TestngDemo;
  */
 import java.util.*;
 
-import javastudy.LogStudy;
 import org.apache.log4j.PropertyConfigurator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,11 +13,47 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import ru.yandex.qatools.allure.annotations.*;
 
-public class TestngStudy extends BaseTest {
+public class TestngTagdemo01 extends BaseTest {
     private Collection collection;
 
-    final Logger logger = LoggerFactory.getLogger(TestngStudy.class);
+    final Logger logger = LoggerFactory.getLogger(TestngTagdemo01.class);
 
+
+    @BeforeTest
+    public void setUptest() {
+        collection = new ArrayList();
+        System.out.println("@BeforeTest - setUp");
+    }
+
+    @AfterTest
+    public void tearDowntest() {
+        collection.clear();
+        System.out.println("@BeforeTest - tearDown");
+    }
+
+    @BeforeMethod
+    public void setUp() {
+        collection = new ArrayList();
+        System.out.println("@BeforeMethod - setUp");
+    }
+
+    @AfterMethod
+    public void tearDown() {
+        collection.clear();
+        System.out.println("@AfterMethod - tearDown");
+    }
+
+    @BeforeClass
+    public void oneTimeSetUp() {
+        // one-time initialization code
+        System.out.println("@BeforeClass - oneTimeSetUp");
+    }
+
+    @AfterClass
+    public void oneTimeTearDown() {
+        // one-time cleanup code
+        System.out.println("@AfterClass - oneTimeTearDown");
+    }
 
     @Step("step赋值a")
     @Attachment
