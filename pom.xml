@@ -14,7 +14,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <timestamp>2017-05-16_18_56_43</timestamp>
         <allure.version>1.4.23</allure.version>
-        <aspectj.version>1.7.4</aspectj.version>
+        <aspectj.version>1.8.3</aspectj.version>
 
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>

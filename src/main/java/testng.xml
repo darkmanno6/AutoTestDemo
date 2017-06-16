@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="testngstudy" parallel="classes" thread-count="1">
-    <test verbose="2" preserve-order="true" name="TestDebug">
+<suite name="testngstudy" preserve-order="true"  parallel="classes" thread-count="1">
+    <test verbose="2" name="TestDebug">
         <parameter name="variable" value="hellotestng" />
+        <!--<groups>-->
+            <!--<dependencies>-->
+                <!--<group name="test" depends-on="start"/>-->
+            <!--</dependencies>-->
+        <!--</groups>-->
         <classes>
+            <!--<class name="TestngDemo.TestngGroupdemo01"/>-->
+
+            <!--<class name="TestngDemo.TestngGroupdemo02">-->
+                <!--&lt;!&ndash;<methods>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<exclude name="test000"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;</methods>&ndash;&gt;-->
+            <!--</class>-->
+            <!--<class name="TestngDemo.TestngGroupdemo03"/>-->
             <class name="TestngDemo.TestngTagdemo01"/>
         </classes>
     </test>
