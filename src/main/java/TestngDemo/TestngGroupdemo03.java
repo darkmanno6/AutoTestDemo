@@ -11,15 +11,15 @@ import org.testng.annotations.Test;
 public class TestngGroupdemo03 extends BaseTest{
     final Logger logger = LoggerFactory.getLogger(TestngGroupdemo03.class);
 
-    @Test(groups = {"test"})
+    @Test(groups = {"testgroup3"})
     public void test007(){
         logger.info("test007");
     }
-    @Test(groups = {"test"})
+    @Test(groups = {"testgroup3"})
     public void test008(){
         logger.info("test008");
     }
-    @Test(groups = {"test"})
+    @Test(groups = {"testgroup3"})
     public void test009(){
         logger.info("test009");
     }
