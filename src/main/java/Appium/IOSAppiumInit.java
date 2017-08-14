@@ -10,11 +10,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 
-public class IosAppium {
+public class IOSAppiumInit {
     private static IOSDriver<WebElement> driver;
 
-    public static void main(String[] args) throws MalformedURLException {
-
+//    public static void main(String[] args) throws MalformedURLException {
+    public IOSAppiumInit() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("automationName", "XCUITest");
         capabilities.setCapability("platformVersion", "10.3");
@@ -25,6 +25,8 @@ public class IosAppium {
         capabilities.setCapability("bundleId", "com.aixuedai.axd");
         capabilities.setCapability("noReset", "true");
         capabilities.setCapability("useNewWDA", "false");
+        capabilities.setCapability("xcodeOrgId", "VPE4QH4M75");//
+        capabilities.setCapability("xcodeSigningId", "iPhone Developer: test aiyoumi");
         driver = new IOSDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         System.out.println("启动成功");
         try {
@@ -32,12 +34,9 @@ public class IosAppium {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        driver.findElementByIosNsPredicate("type='XCUIElementTypeStaticText' AND label='我的'").click();
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("点击我的，然后结束进程");
+    }
+
+    public IOSDriver<WebElement> getDriver(){
+        return driver;
     }
 }
