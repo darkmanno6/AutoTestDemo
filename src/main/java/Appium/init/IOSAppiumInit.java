@@ -1,4 +1,4 @@
-package Appium;
+package Appium.init;
 
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.iOSFindBy;
