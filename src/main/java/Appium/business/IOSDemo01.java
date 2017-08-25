@@ -23,6 +23,9 @@ public class IOSDemo01 {
         capabilities.setCapability("bundleId", "com.aixuedai.axd");
         capabilities.setCapability("noReset", "true");
         capabilities.setCapability("useNewWDA", "false");
+        capabilities.setCapability("xcodeOrgId", "VPE4QH4M75");//
+        capabilities.setCapability("xcodeSigningId", "iPhone Developer: test aiyoumi");
+
         driver = new IOSDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         System.out.println("启动成功");
         try {
@@ -30,9 +33,11 @@ public class IOSDemo01 {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        driver.findElementByIosNsPredicate("type='XCUIElementTypeStaticText' AND label='我的'").click();
+        driver.findElementByIosNsPredicate("type='XCUIElementTypeStaticText' AND label='购物'").click();
 //        driver.findElementByIosNsPredicate("type='XCUIElementTypeStaticText' AND label='我的'").click();
 //        driver.findElementByXPath("//*[@name=\"爱又米\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]").click();
+        driver.findElementByIosNsPredicate("type='XCUIElementTypeStaticText' AND label='自动化测试'").click();
+
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
