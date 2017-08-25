@@ -1,5 +1,7 @@
-package Appium;
+package Appium.business;
 
+import Appium.init.IOSAppiumInit;
+import Appium.pageobject.IOSPage;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;

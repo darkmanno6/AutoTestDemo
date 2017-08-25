@@ -1,4 +1,4 @@
-package Appium;
+package Appium.pageobject;
 
 
 

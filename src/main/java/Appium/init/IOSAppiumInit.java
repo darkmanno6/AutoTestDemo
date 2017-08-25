@@ -1,8 +1,6 @@
-package Appium;
+package Appium.init;
 
 import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.pagefactory.iOSFindBy;
-import io.appium.java_client.pagefactory.iOSXCUITBy;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
