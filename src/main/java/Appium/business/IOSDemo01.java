@@ -1,4 +1,4 @@
-package Appium.business;
+package Appium;
 
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.WebElement;
