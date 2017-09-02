@@ -1,4 +1,4 @@
-package Appium.business;
+package draft;
 
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.WebElement;
@@ -7,6 +7,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+/**
+ * 简单的ios demo，直接运行主函数即可
+ */
 public class IOSDemo01 {
 
     private static IOSDriver<WebElement> driver;
