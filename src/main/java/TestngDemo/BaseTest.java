@@ -2,6 +2,7 @@ package TestngDemo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.TestException;
 import org.testng.annotations.*;
 
 import java.util.ArrayList;
@@ -30,6 +31,7 @@ public class BaseTest {
     @BeforeGroups(groups = "testgroup1")
     public void testgroup1(){
         logger.info("before testbgroup1");
+        throw new TestException("测试");
     }
 
     @AfterGroups(groups = "testgroup1")

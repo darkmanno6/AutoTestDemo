@@ -30,7 +30,7 @@ public class TestngGroupdemo01 extends BaseTest{
         logger.info("test002");
     }
 
-    @Test(groups = {"testgroup1"})
+    @Test(groups = {"testgroup2"})
     public void test003(){
         logger.info("test003");
     }
