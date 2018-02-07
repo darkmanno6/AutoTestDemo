@@ -11,7 +11,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import ru.yandex.qatools.allure.annotations.*;
 
 public class TestngTagdemo01 extends BaseTest {
     private Collection collection;
@@ -55,8 +54,6 @@ public class TestngTagdemo01 extends BaseTest {
         System.out.println("@AfterClass - oneTimeTearDown");
     }
 
-    @Step("step赋值a")
-    @Attachment
     public int give_a(int a){
         PropertyConfigurator.configure("log4j.properties");
         logger.info("hello wasdasd 12313");
@@ -64,12 +61,10 @@ public class TestngTagdemo01 extends BaseTest {
 
     }
 
-    @Step("step赋值b")
     public int give_b(int b){
         return b;
     }
 
-    @Step("step测试")
     public int add_m(int a, int b){
         return give_a(3)+give_b(4);
     }
@@ -77,26 +72,17 @@ public class TestngTagdemo01 extends BaseTest {
 
 
     @Test
-    @Features("feature add")
     public void testAddm(){
         Assert.assertEquals(add_m(1,2),7);
     }
 
     @Test
-    @Features("feature1")
-    @Stories("stories1")
     public void testEmptyCollection() {
         Assert.assertEquals(collection.isEmpty(),true);
         System.out.println("@Test - testEmptyCollection");
     }
 
     @Test
-    @Features("feature1")
-    @Stories("stories2")
-    @Title("title测试标题")
-    @Description("desc测试")
-    @Issue("QATASK-105")
-    @TestCaseId("QATASK-105")
     public void testOneItemCollection() {
         collection.add("itemA");
         Assert.assertEquals(collection.size(),1);
@@ -104,8 +90,6 @@ public class TestngTagdemo01 extends BaseTest {
     }
 
     // 2种testng.xml参数传入方法
-    @Features("feature2")
-    @Stories("stories1")
     @Test(parameters = "variable")
     public void testParameter(String var){
         System.out.println("@Test - 传入参数为：" + var);
@@ -118,8 +102,6 @@ public class TestngTagdemo01 extends BaseTest {
     }
 
     // DataProvide参数化，数据驱动
-    @Features("feature3")
-    @Stories("stories1")
     @Test(dataProvider = "variable")
     public void testDataProvider(String user, String pass){
         System.out.println("@Test - DataProvider传入参数为：" + user +" "+ pass);
