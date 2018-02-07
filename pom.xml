@@ -16,8 +16,6 @@
 
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-
-        <testng>./testng/</testng>
     </properties>
 
     <dependencies>
@@ -39,15 +37,28 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>6.11</version>
+            <version>6.14.2</version>
         </dependency>
         <!--allure的testng插件-->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
-            <version>2.0-BETA14</version>
+            <version>2.0-BETA21</version>
             <scope>test</scope>
         </dependency>
+        <!--处理xls-->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.17</version>
+        </dependency>
+        <!--解析xlsx-->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.17</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -60,7 +71,7 @@
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
-                        <suiteXmlFile>${testng}l</suiteXmlFile>
+                        <suiteXmlFile>${testng}</suiteXmlFile>
                     </suiteXmlFiles>
                     <argLine>
                         -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
@@ -78,5 +89,13 @@
         </plugins>
     </build>
 
+<profiles>
+    <profile>
+        <id>allure</id>
+        <properties>
+            <testng>./testng/testng-allure.xml</testng>
+        </properties>
 
+    </profile>
+</profiles>
 </project>
