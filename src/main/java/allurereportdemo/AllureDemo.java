@@ -23,7 +23,7 @@ public class AllureDemo {
     }
 
     @Test(dataProvider = "data2")
-    public void test3(String a, String b){
+    public void 测试3(String a, String b){
         Assert.assertEquals(a, b);
     }
 
