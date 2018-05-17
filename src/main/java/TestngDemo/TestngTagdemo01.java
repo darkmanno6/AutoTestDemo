@@ -113,4 +113,16 @@ public class TestngTagdemo01 extends BaseTest {
                 {"root","passowrd"},
                 {"admin","admin123"}};
     }
+
+
+    @Test(dataProvider = "user")
+    public void testDataProvier1(String user){
+        System.out.println("@Test - DataProvider传入参数为：" + user);
+    }
+
+    @DataProvider(name = "user")
+    public Object[] getuser(){
+        return new Object[]{"nick", "hello"};
+    }
+
 }
