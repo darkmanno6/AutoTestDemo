@@ -3,12 +3,7 @@
 <suite name="testngstudy" preserve-order="true"  parallel="classes" thread-count="1">
     <test name="allure">
         <classes>
-            <class name="allurereportdemo.AllureDemo">
-                <methods>
-                    <!--<include name="test2"/>-->
-                    <include name="test3"/>
-                </methods>
-            </class>
+            <class name="allurereportdemo.AllureDemo"/>
         </classes>
     </test>
 </suite>
